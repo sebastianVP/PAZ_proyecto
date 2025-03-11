@@ -38,3 +38,28 @@ $ git push -u origin master
 ```
 
 9. Aqui solo una pausa, la cuenta de mi consola en windows es avaldezp22 lo cual esta asociado a mi correo igp.gob.pe, por este motivo **tengo que invitar al proyecto como colaborar**, la cuenta de github esta asociada al correo sebastianVP.
+
+10. Luego los comandos
+```
+$ heroku login
+$ git clone remote_repositorio
+$ cd PAZ_proyecto
+$ heroku create 
+$ git push heroku main
+```
+
+11. Agregar STATIC_ROOT en settings.py
+```
+import os
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+```
+
+12.  Debemos crear:
+
+* Procfile: 
+ web: gunicorn --config gunicorn.conf.py Paz_proyecto.wsgi
+
+* Procfile.windows
+
+* gunicorn.conf.py
