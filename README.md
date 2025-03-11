@@ -65,3 +65,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 * gunicorn.conf.py
 
 13. Hemos modificado el settings.py teniendo de referencia el de la aplicacion de ejemplo carpeta gettingstarted, añadimos el whitenoise y modificamos el requirements.txt, revisar a detalle el settings.py.
+
+14. Para apagarlo: 
+
+heroku ps:scale web=0
+
