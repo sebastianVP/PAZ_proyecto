@@ -3,36 +3,70 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Galería de Imágenes</title>
+  <title>El Mundo de Wendy y Maria Paz</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <!-- AOS CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <!-- Lightbox CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
   <style>
     body {
-      background-color: #f8f9fa;
+      background-color: #ffe6f2; /* Fondo rosado claro */
       padding: 20px;
-    }
-    .card {
-      margin-bottom: 20px;
+      font-family: 'Roboto', sans-serif;
     }
     h1 {
       margin-bottom: 30px;
+      color: #ff69b4; /* Rosa intenso */
+      font-family: 'Playfair Display', serif;
+    }
+    .card {
+      margin-bottom: 20px;
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+    .card-img-top {
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      transition: transform 0.3s;
+    }
+    .card-img-top:hover {
+      transform: scale(1.05);
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1 class="text-center">Galería de Imágenes</h1>
+    <h1 class="text-center animate__animated animate__fadeInDown">El Mundo de Wendy y Maria Paz</h1>
     <div class="row">
       {% for imagen in imagenes %}
-      <div class="col-md-4">
+      <div class="col-md-4" data-aos="fade-up">
         <div class="card">
-          <img src="{% static imagen %}" class="card-img-top" alt="Imagen {{ forloop.counter }}">
+          <a href="{% static imagen %}" data-lightbox="galeria" data-title="Imagen {{ forloop.counter }}">
+            <img src="{% static imagen %}" class="card-img-top" alt="Imagen {{ forloop.counter }}">
+          </a>
         </div>
       </div>
       {% endfor %}
     </div>
   </div>
-  <!-- Bootstrap JS (opcional) -->
+  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- AOS JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <!-- Lightbox JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
 </body>
 </html>
