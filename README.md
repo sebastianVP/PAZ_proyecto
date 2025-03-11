@@ -68,5 +68,10 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 14. Para apagarlo: 
 
-heroku ps:scale web=0
+* heroku ps:scale web=0
+
+15. La aplicacion en la Laptop tiene la siguiente figura:
+
+* Directorio Web: C:\Users\soporte\Documents\TEST_HEROKU_10032025\PAZ_proyecto
+* Directorio Heroku: C:\Users\soporte\Documents\TEST_PRODUCCION_HEROKU
 
