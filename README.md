@@ -6,7 +6,7 @@ Primero crearemos un entorno virtual.
 
 1. Estoy creando el environment: C:\Users\soporte\Documents\TEST_HEROKU_10032025>python -m venv h_money_env
 2. Actvivamos en windows: h_money_env\Scripts\activate
-3. pip install django
+3. pip install django , gunicorn (No olvidar gunicorn)
 4. django-admin startproject Paz_proyecto
 5. Esto crea la carpeta PAZ_proyecto y dentro tenemos 
 6. Lo que puedo indicar es que el repositorio deberia estar en la carpeta Paz_proyecto, esto quiere decir que el git clone nombre_repositorio, deberia descargar la carpeta y al ingresar a la carpeta clonada nombre del proyecto, usar o acceder directamente al contenido del proyecto, aplicacion o manage.py.
