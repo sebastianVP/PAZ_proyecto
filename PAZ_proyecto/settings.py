@@ -24,9 +24,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-&zu1ixo@1_g2@vzf0oa5$_b+^(h_qk#40(f2*9z83yzqva&y@h"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-##DEBUG = True
+DEBUG = True
 
-##ALLOWED_HOSTS = []
+#ALLOWED_HOSTS = []
+"""
 # Django has a debug mode which shows more detailed error messages and also means static assets
 # can be served without having to run the production `collectstatic` command. However, this
 # debug mode *must only be enabled in development* for security and performance reasons:
@@ -39,6 +40,7 @@ DEBUG = os.environ.get("ENVIRONMENT") == "development"
 # The `DYNO` env var is set on Heroku CI, but it's not a real Heroku app, so we have to
 # also explicitly exclude CI:
 # https://devcenter.heroku.com/articles/heroku-ci#immutable-environment-variables
+"""
 IS_HEROKU_APP = "DYNO" in os.environ and "CI" not in os.environ
 
 if IS_HEROKU_APP:
@@ -151,9 +153,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-
-
 STATIC_URL = "static/"
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
