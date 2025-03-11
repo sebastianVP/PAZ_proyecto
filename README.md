@@ -58,7 +58,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 12.  Debemos crear:
 
 * Procfile: 
- web: gunicorn --config gunicorn.conf.py Paz_proyecto.wsgi
+ web: gunicorn --config gunicorn.conf.py PAZ_proyecto.wsgi
 
 * Procfile.windows
 
